@@ -1,6 +1,6 @@
 # 🌸 长链接生成器
 
-一个简洁优雅的长链接生成服务，使用自定义Base2编码直接转换URL。
+一个简洁优雅的长链接生成服务，使用自定义 Base2 编码直接转换 URL。
 
 ## 🚀 快速开始
 
@@ -15,28 +15,29 @@ npm install
 npm start
 ```
 
-服务将在 `http://localhost:3001` 启动
+服务将在 `http://localhost:3000` 启动
 
 ## 🔧 编码原理
 
-使用自定义Base2编码：
+使用自定义 Base2 编码：
+
 - `i` 表示 0
 - `I` 表示 1
 
-例如：`https://www.google.com` 
-→ `https://i.iiiii.im/IIIiIiiiIIIiIiiiIIIiiiiiIIIiiIIii...`
+例如：`https://www.google.com`
+→ `https://lu.yik.at/IIIiIiiiIIIiIiiiIIIiiiiiIIIiiIIii...`
 
 ## 📦 部署
 
-项目已配置Vercel部署，只需：
+项目已配置 Vercel 部署，只需：
 
-1. Fork本项目
-2. 在Vercel中导入项目
+1. Fork 本项目
+2. 在 Vercel 中导入项目
 3. 绑定域名
 
 ## 🎯 使用方法
 
-1. **生成长链接**：访问首页，输入URL，点击生成
+1. **生成长链接**：访问首页，输入 URL，点击生成
 2. **访问长链接**：直接访问生成的链接会自动重定向
 3. **错误处理**：无效链接会显示错误页面
 
