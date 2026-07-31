@@ -4,24 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./icon.svg" />
-    <script
-      charset="UTF-8"
-      id="LA_COLLECT"
-      src="//sdk.51.la/js-sdk-pro.min.js"
-    ></script>
-    <script>
-      LA.init({
-        id: "Kqedlvz2C7T8YuVc",
-        ck: "Kqedlvz2C7T8YuVc",
-        autoTrack: true,
-        hashMode: true,
-      });
-    </script>
-    <script
-      defer
-      src="https://umami.tiouo.cc/script.js"
-      data-website-id="3ebea859-9819-4a12-87bd-0c8d61f92c5f"
-    ></script>
     <title>长链接生成器</title>
     <style>
       body {
@@ -39,6 +21,7 @@
       }
       * {
         font-family: "ZhuZiAYuanJWD" !important;
+        box-sizing: border-box;
       }
       :root {
         --green: #22c55e;
@@ -68,7 +51,6 @@
         font-size: 14px !important;
         text-align: center;
         align-content: center;
-        display: flex;
         justify-content: center;
       }
       button:hover {
@@ -99,12 +81,6 @@
       .x-e-btn:hover:not(:disabled) {
         background: #dc2626 !important;
       }
-      .card {
-        background-color: var(--card-bg);
-        border: var(--card-border);
-        border-radius: var(--card-radius);
-        padding: 12px 16px;
-      }
       input {
         flex: 1;
         padding: 10px 14px;
@@ -128,20 +104,85 @@
       }
       .wrap {
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
         width: 100%;
         min-height: 100%;
         overflow: auto;
+        padding: 20px 16px;
+        gap: 16px;
       }
 
       .card {
         width: 100%;
         max-width: 760px;
         background: var(--card-bg, #fff);
-        border-radius: 12px;
+        border-radius: var(--card-radius);
         border: var(--card-border);
         padding: 28px;
+      }
+
+      /* 广告卡片样式 */
+      .ad-card {
+        width: 100%;
+        max-width: 760px;
+        background: var(--card-bg, #fff);
+        border: var(--card-border);
+        border-radius: var(--card-radius);
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .ad-content {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .ad-title {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--text-color, #0f172a);
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .ad-badge {
+        font-size: 11px;
+        padding: 1px 6px;
+        background: #fee2e2;
+        color: #ef4444;
+        border-radius: 4px;
+        font-weight: normal;
+      }
+
+      .ad-desc {
+        font-size: 13px;
+        color: var(--text-color-light, #64748b);
+      }
+
+      .ad-btn {
+        text-decoration: none;
+        white-space: nowrap;
+      }
+
+      /* 手机端响应式适配 */
+      @media (max-width: 640px) {
+        .ad-card {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .ad-btn {
+          width: 100%;
+        }
+        .ad-btn button {
+          width: 100%;
+        }
       }
 
       h1 {
@@ -240,6 +281,25 @@
             <button onclick="openLink()" class="x-a-btn">打开</button>
           </div>
         </div>
+      </div>
+
+      <!-- 底部广告卡片 -->
+      <div class="ad-card">
+        <div class="ad-content">
+          <div class="ad-title">
+            炒鸡便宜的中转站
+            <span class="ad-badge">推荐</span>
+          </div>
+          <div class="ad-desc">稳定高速 AI 接口中转，欢迎注册使用</div>
+        </div>
+        <a
+          href="https://ai.goodfly.space/sign-up?aff=bOSg"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ad-btn"
+        >
+          <button class="x-a-btn">去注册</button>
+        </a>
       </div>
     </div>
 
