@@ -1,0 +1,13 @@
+name = "long-url"
+main = "worker.js"
+account_id = "c08e66094fd880d7006b0dcec2ff87e5"
+compatibility_date = "2026-08-20"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+[[routes]]
+pattern = "l.tiouo.cc/*"
+zone_name = "tiouo.cc"
